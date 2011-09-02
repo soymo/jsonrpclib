@@ -380,7 +380,7 @@ class MultiCall(object):
 # Not really sure if we should include these, but oh well.
 Server = ServerProxy
 
-class Fault(object):
+class Fault(Exception):
     # JSON-RPC error class
     def __init__(self, code=-32000, message='Server error', rpcid=None):
         self.faultCode = code
